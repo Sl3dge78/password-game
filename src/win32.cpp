@@ -81,9 +81,9 @@ internal void Win32CloseModule(Module *module) {
 }
 
 int main (int argc, char *argv[]) {
-    
+#ifdef DEBUG
     AllocConsole();
-    
+#endif
     SDL_Init(SDL_INIT_EVERYTHING);
     TTF_Init();
     

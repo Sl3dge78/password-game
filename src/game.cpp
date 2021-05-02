@@ -392,6 +392,7 @@ dll_export void Input(SDL_Event *event, GameData *game_data) {
                 LoadLevel(game_data);
             }
         }
+#ifdef DEBUG
         if(event->key.keysym.scancode == SDL_SCANCODE_F4) {
             free(game_data->is_condition_met);
             DestroyAllLevels(game_data->all_levels);
@@ -409,6 +410,7 @@ dll_export void Input(SDL_Event *event, GameData *game_data) {
             game_data->current_level++;
             LoadLevel(game_data);
         }
+#endif
     }
 }
 
